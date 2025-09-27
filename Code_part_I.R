@@ -18,9 +18,9 @@ library(rnaturalearth)
 actdir<-dirname(rstudioapi::getSourceEditorContext()$path)
 setwd(actdir)
 
-# Read full_table with questionnaire data and NUTS2 and NUTS3 map data (originally from .shp files)
-load("full_df_and_shp_maps.RDA")
-save(EU_NUTS2_map, file = "EU_NUTS2_map.RDA")
+# Read full_table with questionnaire data
+load("full_df.RDA")
+# Download and read the NUTS2 and NUTS3 map data (originally from .shp files)
 
 ######## Contingency table with NUTS3 data ################
 
@@ -196,19 +196,19 @@ full_df_2 <- merge(full_df_2, centroids_2,
 # Please note: there are three separate codes for 
 # creating our three indices (DIV, PES, PET)
 
-load("DIV_index_df.RDA")
+load("Index_DIV.RDA")
 # Add data of Diversity (DIV) index to the full_df_2
 full_df_2 <- merge(full_df_2, DIV_index_df[, c("SUM", "ID")], 
                    by = "ID", all=TRUE)
 colnames(full_df_2)[colnames(full_df_2) == "SUM"] <- "Index_DIV"
 
-load("RES_index_df.RDA")
+load("Index_RES.RDA")
 # Add data of Respondents (RES) index to the full_df_2
 full_df_2 <- merge(full_df_2, RES_index_df[, c("SUM", "ID")], 
                    by = "ID", all=TRUE)
 colnames(full_df_2)[colnames(full_df_2) == "SUM"] <- "Index_RES"
 
-load("PES_index_df.RDA")
+load("Index_PES.RDA")
 # Add data of Pesticide (PES) index to the full_df_2
 full_df_2 <- merge(full_df_2, PES_index_df[, c("SUM", "ID")], 
                    by = "ID", all=TRUE)
