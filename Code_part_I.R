@@ -20,7 +20,14 @@ setwd(actdir)
 
 # Read full_table with questionnaire data
 load("full_df.RDA")
-# Download and read the NUTS2 and NUTS3 map data (originally from .shp files)
+
+# Download the NUTS2 and NUTS3 map data (.shp files)
+# Source for NUTS_2 data: https://www.arcgis.com/home/item.html?id=f801554a81294ad29284a4c71fcf4177
+# Source for NUTS_3 data: https://www.arcgis.com/home/item.html?id=5eb88decbff54520b49c785241c07bf4
+#Read NUTS3 map
+EU_NUTS3_map <- st_read("../Europe_NUTS_3_Demographics_and_Boundaries.shp")
+#Read NUTS2 map - for Poland dataset
+EU_NUTS2_map <- st_read("../Europe_NUTS_2_Demographics_and_Boundaries.shp")
 
 ######## Contingency table with NUTS3 data ################
 
