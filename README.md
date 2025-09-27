@@ -5,5 +5,5 @@ This repository accompanies the publication below. Please **cite** it if you use
 (Link: https://www.sciencedirect.com/science/article/pii/S161886672500408X#ab0015)
 
 References
-ArcGIS Data and Maps. 2022a. Europe NUTS 2 Demographics and Boundaries—Overview. https://www.arcgis.com/sharing/rest/content/items/48f0d1a2006c4e89a85712a618fcff89
+ArcGIS Data and Maps. 2022a. Europe NUTS 2 Demographics and Boundaries—Overview. https://www.arcgis.com/sharing/rest/content/items/48f0d1a2006c4e89a85712a618fcff89;
 ArcGIS Data and Maps. 2022b. Europe NUTS 3 Demographics and Boundaries—Overview. https://www.arcgis.com/home/item.html?id=5eb88decbff54520b49c785241c07bf4
